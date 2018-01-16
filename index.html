@@ -1,218 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="theme-color" content="#000000">
-    <!--
-      manifest.json provides metadata used when your web app is added to the
-      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
-    <link rel="shortcut icon" href="/favicon.ico">
-    <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link href="https://fonts.googleapis.com/css?family=Knewave" rel="stylesheet">
-<link href="./style.css" rel="stylesheet">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>SMIT-GPA ||Calculator </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="App that calculates your GPA at SMIT according to your subject grades.">
+	<meta name="author" content="Rishav Anand">
+	<meta name="author" content="Rohan Prasad">
+
+	<title>GPA Calculator - Home</title>
+
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<!-- Custom styles for this template -->
+	<link href="css/style.css" rel="stylesheet">
+
   </head>
-  <body style="background-image:url('source2.gif');background-repeat:repeat-x">
-    <div>
 
-      <div class="App">
-        <header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
-          <div class="w3-bar-item w3-padding-24 w3-wide">SMIT GPA CALCULATOR<sup><small>(Mobile)</small> </sup></div>
+  <body>
+
+	<!-- Navigation -->
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+	  <div class="container">
+		<a class="navbar-brand" href="index.html">
+		  <strong>GPA Calculator</strong>
+		</a>
+		 <ul class="nav navbar-nav">
+	      <li>
+	      	<a class="nav-link" href="https://github.com/rishavanand/smit-gpa-calculator-v2">GitHub Calculator Repo</a>
+	      </li>
+	      <li>
+	      	<a class="nav-link" href="http://github.com/rishavanand/smit-result-scraper">GitHub Scraper Repo</a>
+	      </li>
+	    </ul>
+	  </div>
+	</nav>
+
+	<!-- Page Content -->
+	<div class="jumbotron">
+		<div class="container">
+			<div class="col-md-6">
+				<h3><strong>Howdy SMITian!</strong></h3>
+				<p>This app will calculate your GPA based on the results scraped from <a href="https://results.smu.edu.in/smit/">https://results.smu.edu.in/smit/</a>. All the best!</p>
+			</div>
+			<div class="col-md-6">
+				<h3><strong>Calculate</strong></h3>
+				<form>
+					<div class="form-group">
+						<select id="exam-id" class="form-control">
+							<option value="non">Select examination</option>
+							<option value="33">November/December 2017 Semester Examination</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<input id="registration-number" type="number" class="form-control" placeholder="Enter registration number">
+					</div>
+					<div class="form-group">
+						<center>
+							<button id="calculate-button" type="button" class="btn btn-primary centered">Calculate</button>
+						</center>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div class="container" id="gpa-section" style="display: none;">
+		<h3><strong>Your result: </strong></h3>
+		<table id="subject-table" class="table table-striped">
+			<thead>
+				<tr>
+					<th>Subject</th>
+					<th>Grade</th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+		<center><h3><strong><div id="show-gpa"></div></strong></h3></center>
+	</div>
+		
+	<!-- /.container -->
+
+	<footer id="footer">
+		Simple apps by <a id="web-link" href="http://www.rohanprasad.com/" target="_blank">Rohan Prasad</a> & <a id="web-link" href="https://rishavanand.com" target="_blank">Rishav Anand</a>
+	</footer>
+
+	<!-- Bootstrap core JavaScript -->
+	<script src="js/jquery/jquery.min.js"></script>
+	<script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+	<script src="js/calculate.js"></script>
 
-        </header>
-
-
-
-
-
-      <div class="w3-main" >
-
-
-
-
-      <header class="w3-container w3-xlarge main-header">
-        <p class="w3-left web-title">SMIT GPA CALCULATOR <sup><small>(Web)</small> </sup> </p>
-      </header>
-
-        </div>
-
-
-
-            <div >
-
-
-        <div>
-
-          <div class="cont">
-
-
-
-              <label>
-                <label>
-                  <div class="dropdown">
-              <button onclick="myFunction()" class="dropbtn">Select Examination</button>
-              <div id="myDropdown" class="dropdown-content">
-                <a href="33_exam.html">NOVEMBER/DECEMBER 2017 SEMESTER EXAMINATION</a>
-
-              </div>
-            </div>
-            <p id="test"><p>
-
-
-
-                </label>
-
-            <h4> No Examination Selected</h4>
-
-              </label>
-              <div class="w3-container">
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-             </div>
-
-
-
-
-          </div>
-
-
-
-
-
-
-            </div>
-            <table class="w3-table-all" id="tableprop">
-              <thead>
-                <tr class="w3-green">
-                  <th>"Subject"</th>
-                  <th>"Grade"</th>
-
-                </tr>
-              </thead>
-              <tr>
-              <div > <td id="grade1"> </td></div>
-                <td id="sub1"> </td>
-
-              </tr>
-              <tr>
-                <td id="grade2"></td>
-                <td id="sub2"></td>
-
-              </tr>
-              <tr>
-                <td id="grade3"></td>
-                <td id="sub3"></td>
-
-              </tr>
-              <tr>
-                <td id="grade4"></td>
-                <td id="sub4"></td>
-
-              </tr>
-              <tr>
-                <td id="grade5"></td>
-                <td id="sub5"></td>
-
-              </tr>
-              <tr>
-                <td id="grade6"></td>
-                <td id="sub6"></td>
-
-              </tr>
-              <tr>
-                <td id="grade7"></td>
-                <td id="sub7"></td>
-
-              </tr>
-              <tr>
-                <td id="grade8"></td>
-                <td id="sub8"></td>
-
-              </tr>
-              <tr>
-                <td id="grade9"></td>
-                <td id="sub9"></td>
-
-              </tr>
-              <tr>
-                <td id="grade10"></td>
-                <td id="sub10"></td>
-
-              </tr>
-            <!--  <tr>
-                <td id="grade11"></td>
-                <td id="sub11"></td>
-
-              </tr>
-              <tr>
-                <td id="grade12"></td>
-                <td id="sub12"></td>
-
-              </tr>-->
-            </table>
-
-
-
-            <!--<button id="showgpa"> click </button>
-            <div id='row1'> sdrhjsdvhjsdvghj</div-->
-            <div class="w3-container">
-              <div class="w3-display-container">
-                <div >Made with  <span class="credits"> &#10084; </span>  by <a href="http://www.rohanprasad.com"  target="_blank" class="credits" > Rohan Prasad</a> and <a href="http://rishavanand.com/" target="_blank" class="credits"  >Rishav Anand </a> with JS </div>
-                <small> (Made for Educational Purpose Only). We don't own the data used. </small>
-                </div>
-              </div>
-            </div>
-
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-<script src="app.js"></script>
-<noscript>
-  You need to enable JavaScript to run this app.
-</noscript>
   </body>
+
 </html>
