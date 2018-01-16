@@ -24,17 +24,25 @@
 	<!-- Navigation -->
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 	  <div class="container">
-		<a class="navbar-brand" href="index.html">
-		  <strong>GPA Calculator</strong>
-		</a>
-		 <ul class="nav navbar-nav">
-	      <li>
-	      	<a class="nav-link" href="https://github.com/rishavanand/smit-gpa-calculator-v2">GitHub Calculator Repo</a>
-	      </li>
-	      <li>
-	      	<a class="nav-link" href="http://github.com/rishavanand/smit-result-scraper">GitHub Scraper Repo</a>
-	      </li>
-	    </ul>
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </button>
+		  <a class="navbar-brand" href="index.html"><strong>GPA Calculator</strong></a>
+		</div>
+		<div id="navbar" class="navbar-collapse collapse">
+		<ul class="nav navbar-nav">
+			<li>
+				<a class="nav-link" href="https://github.com/rishavanand/smit-gpa-calculator-v2">GitHub Calculator Repo</a>
+			</li>
+			<li>
+				<a class="nav-link" href="http://github.com/rishavanand/smit-result-scraper">GitHub Scraper Repo</a>
+			</li>
+		</ul>
+		</div><!--/.nav-collapse -->
 	  </div>
 	</nav>
 
@@ -76,8 +84,7 @@
 					<th>Grade</th>
 				</tr>
 			</thead>
-			<tbody>
-			</tbody>
+			<tbody></tbody>
 		</table>
 		<center><h3><strong><div id="show-gpa"></div></strong></h3></center>
 	</div>
