@@ -1,0 +1,248 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+#demo{
+  color:#16a085;
+  font-family: "Knewave",Arial,Helvetica,sans-serif;
+  font-size:40px;
+}
+.App-title {
+  font-size: 1.5em;
+}
+
+.credits{
+  color:red;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.nav-bar{
+  align:left;
+}
+
+
+header{
+  margin-bottom: 50px;
+}
+body{
+  background-color: white;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+
+.w3-sidebar a {font-family: "Roboto", sans-serif}
+body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+
+
+.main-header{
+  background-color:#000;
+
+}
+
+.web-title{
+  color:#fff;
+  height: 20px;
+  font-family: "Montserrat",cursive;
+
+}
+
+.main-frame{
+    box-sizing: border-box;
+    border-radius: 1px;
+    box-shadow: 0px 1px 3px  gray;
+    cursor: pointer;
+    display: block;
+    width: 50%;
+    height:200px;
+    font-family: 'AvenirNext','Helvetica Neue',Arial,Helvetica,sans-serif;
+    background-color: #FFF;
+    margin-top:30px;
+
+  }
+
+
+
+.main-frame1{
+
+}
+
+input, button {
+  border: none;
+  outline: none;
+  background: none;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+
+.cont {
+  overflow: hidden;
+  position: relative;
+  width: auto;
+  height: 550px;
+  margin: 0 auto 100px;
+  background: #fff;
+  min-width: 400px;
+
+}
+
+
+
+button {
+  display: block;
+  margin: 0 auto;
+  width: 260px;
+  height: 36px;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+
+a{
+  text-decoration:none;
+}
+
+.cont{
+  background-color:#F2F1EF;
+  margin-top:50px;
+  box-sizing: border-box;
+  border-radius: 30px;
+  box-shadow: 1px 1px 2px 0.2px  gray;
+  cursor: pointer;
+  display: block;
+  padding:20px;
+  width: 50%;
+  height:auto;
+  font-family: 'AvenirNext','Helvetica Neue',Arial,Helvetica,sans-serif;
+  margin-top:30px;
+  min-width: 400px !important;
+}
+
+h2 {
+  width: 100%;
+  font-size: 26px;
+  text-align: center;
+}
+
+label {
+  display: block;
+  width: 260px;
+  margin: 25px auto 0;
+  text-align: center;
+}
+label span {
+  font-size: 12px;
+  color: #cfcfcf;
+  text-transform: uppercase;
+}
+
+input {
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  padding-bottom: 5px;
+  font-size: 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.submit {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  background:#16a085 ;
+  text-transform: uppercase;
+}
+
+.fb-btn {
+  border: 2px solid #d3dae9;
+  color: #34495e;
+}
+.fb-btn span {
+  font-weight: bold;
+  color: #455a81;
+}
+
+.nameshower{
+  line-height:120px;
+}
+
+table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    height: 6px;
+}
+
+
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #3e8e41;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin : 10px;
+
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+.dropbtn{
+display: block;
+padding: 2px;
+margin: 1px auto;
+width: 260px;
+border-radius: 0px !important;
+height: 26px;
+color: #fff;
+font-size: 15px;
+cursor: pointer;
+background-color:#34495e;
+}
