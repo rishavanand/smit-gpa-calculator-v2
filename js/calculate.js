@@ -27,12 +27,13 @@ $("#calculate-button").click(function(){
 				$('#subject-table tbody').html('');
 				$("#gpa-section").fadeIn(500);
 				for (sub in result){
-					var subjectCode = sub;
 					var subjectGrade = result[sub];
 					var subjectName = data['subjects'][sub]['name'];
 					var subjectCredit = data['subjects'][sub]['credit'];
-					pointSum += (gradeToPoint(subjectGrade) * subjectCredit);
-					totalCredit += subjectCredit;
+					if(sub.search('BACK') == -1){
+						pointSum += (gradeToPoint(subjectGrade) * subjectCredit);
+						totalCredit += subjectCredit;
+					}
 					var markup = '<tr><td>' + subjectName + '</td><td>' + subjectGrade + '</td></tr>';
 					$('#subject-table tbody').append(markup);
 				}
