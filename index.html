@@ -1,116 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="App that calculates your GPA at SMIT.">
+    <meta name="author" content="Rishav Anand">
+    <meta name="author" content="Rohan Prasad">
 
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="App that calculates your GPA at SMIT.">
-	<meta name="author" content="Rishav Anand">
-	<meta name="author" content="Rohan Prasad">
+    <title>GPA Calculator - Home</title>
 
-	<title>GPA Calculator - Home</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
 
-	<!-- Bootstrap core CSS -->
-	<link rel="stylesheet" href="css/bootstrap.min.css">
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><strong>GPA Calculator</strong></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a class="nav-link" href="https://github.com/rishavanand/smit-gpa-calculator-v2">GitHub Calculator Repo</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="http://github.com/rishavanand/smit-result-scraper">GitHub Scraper Repo</a>
+                    </li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </nav>
 
-	<!-- Custom styles for this template -->
-	<link href="css/style.css" rel="stylesheet">
-
-  </head>
-
-  <body>
-
-	<!-- Navigation -->
-	<nav class="navbar navbar-inverse navbar-fixed-top">
-	  <div class="container">
-		<div class="navbar-header">
-		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-			<span class="sr-only">Toggle navigation</span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-		  </button>
-		  <a class="navbar-brand" href="index.html"><strong>GPA Calculator</strong></a>
-		</div>
-		<div id="navbar" class="navbar-collapse collapse">
-		<ul class="nav navbar-nav">
-			<li>
-				<a class="nav-link" href="https://github.com/rishavanand/smit-gpa-calculator-v2">GitHub Calculator Repo</a>
-			</li>
-			<li>
-				<a class="nav-link" href="http://github.com/rishavanand/smit-result-scraper">GitHub Scraper Repo</a>
-			</li>
-		</ul>
-		</div><!--/.nav-collapse -->
-	  </div>
-	</nav>
-
-	<!-- Page Content -->
-	<div class="jumbotron">
-		<div class="container">
-			<div class="col-md-6">
-				<h3><strong>Howdy SMITian!</strong></h3>
-				<p>This app will calculate your GPA based on the results scraped from <a href="https://results.smu.edu.in/smit/">https://results.smu.edu.in/smit/</a>. All the best!</p>
-			</div>
-			<div class="col-md-6">
-				<h3><strong>Calculate</strong></h3>
-				<form>
-					<div class="form-group">
-						<select id="exam-id" class="form-control">
-							<option value="non">Select examination</option>
-							<option value="33">November/December 2017 Semester Examination</option>
-						</select>
-					</div>
-					<div class="form-group">
-						<input id="registration-number" type="number" class="form-control" placeholder="Enter registration number">
-					</div>
-					<div class="form-group">
-						<center>
-							<button id="calculate-button" type="button" class="btn btn-primary centered">Calculate</button>
-						</center>
-					</div>
-				</form>
-			</div>
-		</div>
+    <!-- Page Content -->
+    <div class="main-area">
+	    <div class="container">
+	    	<!-- <div class="col-md-6 col-md-offset-3">
+	        	<center>
+	            <div class="btn-group">
+					<button type="button" class="btn btn-default">Calculate</button>
+					<button type="button" class="btn btn-default">Estimate</button>
+				</div>
+				</center>
+	        </div> -->
+	        <div class="col-md-6 col-md-offset-3 div-spacing">
+	            <h3><strong>Calculator</strong></h3>
+	            <p>Select the examination and enter your registration number below to know your GPA. Your GPA will be calculated based on the results scraped from <a href="https://results.smu.edu.in/smit/" class="white-link">SMIT result site</a></p>
+<!-- 	            <p>This app will calculate your GPA based on the results scraped from <a href="https://results.smu.edu.in/smit/">https://results.smu.edu.in/smit/</a>. All the best!</p> -->
+	        </div>
+	        <div class="col-md-6 col-md-offset-3 div-spacing">
+	            <!-- <h3><strong>Calculate</strong></h3> -->
+	            <form>
+	                <div class="form-group">
+	                    <select id="exam-id" class="form-control">
+	                        <option value="non">Select examination</option>
+	                        <option value="33">November/December 2017 Semester Examination</option>
+	                    </select>
+	                </div>
+	                <div class="form-group">
+	                    <input id="registration-number" type="number" class="form-control" placeholder="Enter registration number">
+	                </div>
+	                <div class="form-group">
+	                    <center>
+	                        <button id="calculate-button" type="button" class="btn btn-success full-width">Calculate</button>
+	                    </center>
+	                </div>
+	            </form>
+	        </div>
+	    </div>
 	</div>
 
-	<div class="container" id="gpa-section" style="display: none;">
-		<h3><strong>Your result: </strong></h3>
-		<table id="subject-table" class="table table-striped">
-			<thead>
-				<tr>
-					<th>Subject</th>
-					<th>Grade</th>
-				</tr>
-			</thead>
-			<tbody></tbody>
-		</table>
-		<center><h3><strong><div id="show-gpa"></div></strong></h3></center>
-	</div>
-		
-	<!-- /.container -->
+    <div class="container" id="gpa-section" style="display: none;">
+        <h3><strong>Your result: </strong></h3>
+        <table id="subject-table" class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <center>
+            <h3><strong><div id="show-gpa"></div></strong></h3></center>
+    </div>
+    <!-- /.container -->
+    <footer id="footer">
+        Simple apps by <a id="web-link" href="http://www.rohanprasad.com/" target="_blank">Rohan Prasad</a> & <a id="web-link" href="https://rishavanand.com" target="_blank">Rishav Anand</a>
+        <p> (We don't own the data used) </p>
+    </footer>
+    <!-- Bootstrap core JavaScript -->
+    <script src="js/jquery/jquery.min.js"></script>
+    <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="js/calculate.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116549528-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
 
-	<footer id="footer">
-		Simple apps by <a id="web-link" href="http://www.rohanprasad.com/" target="_blank">Rohan Prasad</a> & <a id="web-link" href="https://rishavanand.com" target="_blank">Rishav Anand</a>
-		<p> (We don't own the data used) </p>
-		</footer>
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-	<!-- Bootstrap core JavaScript -->
-	<script src="js/jquery/jquery.min.js"></script>
-	<script src="js/bootstrap/bootstrap.bundle.min.js"></script>
-	<script src="js/calculate.js"></script>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116549528-1"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-
-	  gtag('config', 'UA-116549528-1');
-	</script>
-
-
-  </body>
+    gtag('config', 'UA-116549528-1');
+    </script>
+</body>
 
 </html>
