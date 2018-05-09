@@ -9,8 +9,10 @@ body{
 }
 
 .main-area{
-	padding-top: 70px;
-	background-image: linear-gradient(125deg, #32325d 0%, #6162b5 100%) !important;
+	margin-top: 50px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background-image: linear-gradient(125deg, #34495e 0%, #bdc3c7 100%) !important;
 	width: 100%;
 	color: white;
 }
@@ -24,10 +26,47 @@ body{
 	margin-top: 30px;
 }
 
-.full-width{
+.full-width-btn{
 	width: 100%;
-	margin-bottom: 70px;
+	margin-bottom: 0px;
 }
+
+.result-form{
+	padding-top: 40px;
+}
+
+.result-text{
+	padding-top: 30px;
+}
+
+.spacing{
+	padding: 20px;
+	width: 100%;
+}
+
+.transparent-button{
+	background-color: Transparent;
+	border: 0.5px solid white;
+}
+
+.transparent-button:focus{
+	background-color: Transparent;
+	border: 0.5px solid white;
+}
+
+.transparent-button:hover{
+	color: #d9534f;
+	background-color: white;
+	border: 0.5px solid white;
+}
+
+.gpa-display{
+	border: solid #27ae60;
+	border-radius: 4px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
+
 
 /* FOOTER */
 #footer {

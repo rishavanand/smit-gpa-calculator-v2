@@ -37,10 +37,12 @@ $("#calculate-button").click(function(){
 					var markup = '<tr><td>' + subjectName + '</td><td>' + subjectGrade + '</td></tr>';
 					$('#subject-table tbody').append(markup);
 				}
-			var gpa = pointSum / totalCredit
-			gpa = Math.round((gpa) * 100) / 100
-			$("#show-gpa").html('Your GPA is : ' + gpa)
-			window.location = '#gpa-section';
+				var gpa = pointSum / totalCredit
+				gpa = Math.round((gpa) * 100) / 100
+				$("#show-gpa").html('Your GPA is : ' + gpa)
+				$('html, body').animate({
+			        scrollTop: $("#gpa-section").offset().top
+			    }, 2000);
 			}else{
 				alert("Registration number not found");
 			}

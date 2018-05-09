@@ -45,34 +45,43 @@
 
     <!-- Page Content -->
     <div class="main-area">
+
 	    <div class="container">
-	        <div class="col-md-6 col-md-offset-3 div-spacing">
-	            <h3><strong>Calculator</strong></h3>
-	            <p>Select the examination and enter your registration number below to know your GPA. Your GPA will be calculated based on the results scraped from <a href="https://results.smu.edu.in/smit/" class="white-link">SMIT result site</a></p>
-	        </div>
-	        <div class="col-md-6 col-md-offset-3 div-spacing">
-	            <form>
-	                <div class="form-group">
-	                    <select id="exam-id" class="form-control">
-	                        <option value="non">Select examination</option>
-	                        <option value="33">November/December 2017 Semester Examination</option>
-	                    </select>
-	                </div>
-	                <div class="form-group">
-	                    <input id="registration-number" type="number" class="form-control" placeholder="Enter registration number">
-	                </div>
-	                <div class="form-group">
-	                    <center>
-	                        <button id="calculate-button" type="button" class="btn btn-success full-width">Calculate</button>
-	                    </center>
-	                </div>
-	            </form>
+	        <div class="col-md-6 col-md-offset-3">
+                <div class="result-try-btn">
+                    <button type="button" class="btn transparent-button full-width-btn">GPA estimator coming soon...</button>
+                </div>
+                <div class="result-text">
+                    <h3>
+                        <strong>Calculator</strong>
+                    </h3>
+                    <p>Select the examination and enter your registration number below to know your GPA. Your GPA will be calculated based on the results scraped from <a href="https://results.smu.edu.in/smit/" class="white-link">SMIT result site</a></p>
+                </div>
+                <div class="result-form">
+                    <form>
+                        <div class="form-group">
+                            <select id="exam-id" class="form-control">
+                                <option value="non">Select examination</option>
+                                <option value="33">November/December 2017 Semester Examination</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input id="registration-number" type="number" class="form-control" placeholder="Enter registration number">
+                        </div>
+                        <center>
+                            <button id="calculate-button" type="button" class="btn btn-danger full-width">Calculate</button>
+                        </center>
+                    </form>
+                </div>
 	        </div>
 	    </div>
 	</div>
 
+    <!-- show result div -->
     <div class="container" id="gpa-section" style="display: none;">
-        <h3><strong>Your result: </strong></h3>
+        <h3>
+            <strong>Your result: </strong>
+        </h3>
         <table id="subject-table" class="table table-striped">
             <thead>
                 <tr>
@@ -83,8 +92,14 @@
             <tbody></tbody>
         </table>
         <center>
-            <h3><strong><div id="show-gpa"></div></strong></h3></center>
+            <h3>
+                <strong>
+                    <div id="show-gpa" class="gpa-display"></div>
+                </strong>
+            </h3>
+        </center>
     </div>
+
     <!-- /.container -->
     <footer id="footer">
         Simple apps by <a id="web-link" href="http://www.rohanprasad.com/" target="_blank">Rohan Prasad</a> & <a id="web-link" href="https://rishavanand.com" target="_blank">Rishav Anand</a>
