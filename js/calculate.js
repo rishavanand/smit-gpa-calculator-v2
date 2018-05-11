@@ -39,7 +39,7 @@ $("#calculate-button").click(function(){
 				}
 				var gpa = pointSum / totalCredit
 				gpa = Math.round((gpa) * 100) / 100
-				$("#show-gpa").html('Your GPA is : ' + gpa)
+				$("#show-gpa").html('Your GPA is : ' + gpa);
 				$('html, body').animate({
 			        scrollTop: $("#gpa-section").offset().top
 			    }, 2000);

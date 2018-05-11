@@ -30,13 +30,13 @@
                 </button>
                 <a class="navbar-brand" href="index.html"><strong>GPA Calculator</strong></a>
             </div>
-            <div id="navbar" class="navbar-collapse collapse">
+            <div id="navbar" class="navbar-collapse collapse pull-right">
                 <ul class="nav navbar-nav">
-                    <li>
-                        <a class="nav-link" href="https://github.com/rishavanand/smit-gpa-calculator-v2">GitHub Calculator Repo</a>
+                	<li>
+                        <a class="nav-link" href="estimator.html">GPA Estimator</a>
                     </li>
                     <li>
-                        <a class="nav-link" href="http://github.com/rishavanand/smit-result-scraper">GitHub Scraper Repo</a>
+                        <a class="nav-link" href="https://github.com/rishavanand/smit-gpa-calculator-v2">Source Code</a>
                     </li>
                 </ul>
             </div>
@@ -48,33 +48,35 @@
 
 	    <div class="container">
 	        <div class="col-md-6 col-md-offset-3">
-                <div class="result-try-btn">
-                    <button type="button" class="btn transparent-button full-width-btn">GPA estimator coming soon...</button>
+
+                <div class="bottom-spacing">
+                    <button type="button" class="btn transparent-button full-width-btn" onclick="window.location = 'estimator.html'">Try new GPA estimator</button>
                 </div>
-                <div class="result-text">
-                    <h3>
+
+                <div class="bottom-spacing">
+                    <h3 style="margin-top: 10px;">
                         <strong>Calculator</strong>
                     </h3>
                     <p>Select the examination and enter your registration number below to know your GPA. Your GPA will be calculated based on the results scraped from <a href="https://results.smu.edu.in/smit/" class="white-link">SMIT result site</a></p>
                 </div>
-                <div class="result-form">
-                    <form>
-                        <div class="form-group">
-                            <select id="exam-id" class="form-control">
-                                <option value="non">Select examination</option>
-                                <option value="33">November/December 2017 Semester Examination</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <input id="registration-number" type="number" class="form-control" placeholder="Enter registration number">
-                        </div>
-                        <center>
-                            <button id="calculate-button" type="button" class="btn btn-danger full-width-btn no-outline">Calculate</button>
-                        </center>
-                    </form>
+
+
+                <div class="form-group">
+                    <select id="exam-id" class="form-control">
+                        <option value="non">Select examination</option>
+                        <option value="33">November/December 2017 Semester Examination</option>
+                    </select>
                 </div>
+                <div class="form-group">
+                    <input id="registration-number" type="number" class="form-control" placeholder="Enter registration number">
+                </div>
+                <center>
+                    <button id="calculate-button" type="button" class="btn btn-danger full-width-btn no-outline">Calculate</button>
+                </center>
+
 	        </div>
 	    </div>
+
 	</div>
 
     <!-- show result div -->

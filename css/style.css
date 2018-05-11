@@ -31,17 +31,29 @@ body{
 	margin-bottom: 0px;
 }
 
-.result-form{
-	padding-top: 40px;
+.left-btn{
+	padding-left: 0px;
 }
 
-.result-text{
-	padding-top: 30px;
+.right-btn{
+	padding-right: 0px;
+}
+
+.bottom-spacing{
+	padding-bottom: 30px;
 }
 
 .spacing{
 	padding: 20px;
 	width: 100%;
+}
+
+.active{
+	display: block;
+}
+
+.inactive{
+	display: none;
 }
 
 .transparent-button{
