@@ -66,11 +66,11 @@
                     <select id="exam-id" class="form-control">
                         <option value="non">Select examination</option>
                         <option value="33">November/December 2017 Semester Examination</option>
-                        <option value="35">April/May 2018 Semester Examination</option>
+                        <option value="35" selected="selected">April/May 2018 Semester Examination</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <input id="registration-number" type="number" class="form-control" placeholder="Enter registration number">
+                    <input id="registration-number" type="number" class="form-control" placeholder="Enter registration number" autofocus>
                 </div>
                 <center>
                     <button id="calculate-button" type="button" class="btn btn-danger full-width-btn no-outline">Calculate</button>
@@ -118,10 +118,8 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116549528-1"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
-
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'UA-116549528-1');
     </script>
 </body>
