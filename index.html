@@ -12,105 +12,16 @@
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/redirect.css">
 </head>
 
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html"><strong>GPA Calculator</strong></a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse pull-right">
-                <ul class="nav navbar-nav">
-                	<li>
-                        <a class="nav-link" href="estimator.html">GPA Estimator</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="https://github.com/rishavanand/smit-gpa-calculator-v2">Source Code</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Page Content -->
-    <div class="main-area">
-
-	    <div class="container">
-	        <div class="col-md-6 col-md-offset-3">
-
-                <!-- <div class="bottom-spacing">
-                    <button type="button" class="btn transparent-button full-width-btn" onclick="window.location = 'estimator.html'">Click here to try new GPA estimator</button>
-                </div> -->
-
-                <div class="bottom-spacing">
-                    <h3 style="margin-top: 10px;">
-                        <strong>Calculator</strong>
-                    </h3>
-                    <p>Select the examination and enter your registration number below to know your GPA. Your GPA will be calculated based on the results scraped from <a href="https://results.smu.edu.in/smit/" class="white-link">SMIT result site</a></p>
-                    <!-- <p><u><i>NOTE: THE GPA CALCULATED BELOW MIGHT NOT BE ACCURATE AS NOT ALL RESULT HAVE BEEN UPLOADED</i></u></p> -->
-                </div>
-
-
-                <div class="form-group">
-                    <select id="exam-id" class="form-control">
-                        <option value="non">Select examination</option>
-                        <option value="33">November/December 2017 Semester Examination</option>
-                        <option value="35">April/May 2018 Semester Examination</option>
-                        <option value="41" selected="selected">November/December 2018 Semester Examination</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <input id="registration-number" type="number" class="form-control" placeholder="Enter registration number" autofocus>
-                </div>
-                <center>
-                    <button id="calculate-button" type="button" class="btn btn-danger full-width-btn no-outline">Calculate</button>
-                </center>
-
-	        </div>
-	    </div>
-
+	<div class="redirect-container">
+		<img src="images/loader.gif" height="100">
+		<h2>Redirecting you to a newer version of GPA Calculator, the GPA buddy...</h2>
+		<h4>If not redirected click here: <a href="https://gpa.rishavanand.com">https://gpa.rishavanand.com</a></h4>
 	</div>
-
-    <!-- show result div -->
-    <div class="container" id="gpa-section" style="display: none;">
-        <h3>
-            <strong>Your result: </strong>
-        </h3>
-        <table id="subject-table" class="table table-striped">
-            <thead>
-                <tr>
-                    <th>Subject</th>
-                    <th>Grade</th>
-                </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
-        <center>
-            <h3>
-                <strong>
-                    <div id="show-gpa" class="gpa-display"></div>
-                </strong>
-            </h3>
-            <div class="text-muted">Note : Clicking on <img height="25" src="images/cross.svg"> will remove a subject from GPA calculation. Incase you want to prevent a subject from being added to you GPA this will come in handy.</div>
-        </center>
-    </div>
-
-    <!-- /.container -->
-    <footer id="footer">
-        Simple apps by <a id="web-link" href="http://www.rohanprasad.com/" target="_blank">Rohan Prasad</a> & <a id="web-link" href="https://rishavanand.com" target="_blank">Rishav Anand</a>
-        <p> (We don't own the data used) </p>
-    </footer>
     
     <!-- Bootstrap core JavaScript -->
     <script src="js/jquery/jquery.min.js"></script>
@@ -123,6 +34,11 @@
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'UA-116549528-1');
+    </script>
+    <script type="text/javascript">
+    	setTimeout(() => {
+    		window.location = 'https://gpa.rishavanand.com';
+    	}, 5000);
     </script>
 </body>
 
